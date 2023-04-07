@@ -5,7 +5,7 @@ movies <- readr::read_csv("ml-25m/movies.csv")
 links <- readr::read_csv("ml-25m/links.csv")
 
 genome_tags <- readr::read_csv("ml-25m/genome-tags.csv")
-genome_scores <- readr::read_cav("ml-25m/genome-scores.csv")
+genome_scores <- readr::read_csv("ml-25m/genome-scores.csv")
 
 movies <- movies |>
   semi_join(genome_scores, by = "movieId")
